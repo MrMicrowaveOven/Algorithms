@@ -1,0 +1,19 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "Practicing Leetcode problems",
+  "main": "ReversePolish.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Benjamin Zagorski",
+  "license": "ISC"
+}
