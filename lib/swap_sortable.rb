@@ -1,6 +1,6 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-inpu = gets.chomp
-inpu = gets.chomp
+# inpu = gets.chomp
+# inpu = gets.chomp
 
 class Array
   def sorted?
@@ -15,7 +15,7 @@ def swap_sortable(arr)
   return "yes" if arr.sorted?
   sorted = arr.sort
   wrong_indices = []
-  
+
   arr.each_with_index do |el, ind|
     sorted_el = sorted[ind]
     diff = el.to_i - sorted_el.to_i
@@ -39,4 +39,4 @@ def swap_sortable(arr)
   return "no"
 end
 
-puts swap_sortable(inpu)
+# puts swap_sortable(inpu)
