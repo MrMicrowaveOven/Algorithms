@@ -1,5 +1,15 @@
 require_relative '../lib/PrimeHelpers'
 
+describe "nth_prime" do
+  it "returns the nth prime" do
+    expect(nth_prime(1)).to eq(2)
+    expect(nth_prime(2)).to eq(3)
+    expect(nth_prime(3)).to eq(5)
+    expect(nth_prime(4)).to eq(7)
+    expect(nth_prime(5)).to eq(11)
+  end
+end
+
 describe "prime_factors" do
   it "returns prime factors" do
     expect(prime_factors(2)).to eq([2])
