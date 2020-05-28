@@ -13,9 +13,9 @@ def tree_to_array(root)
       path.chars.each do |char|
         node = char == '0' ? node.left : node.right
       end
-      if node && node.val
+      if node
         arr << node.val
-        not_all_null = true
+        not_all_null = true if node.val
       end
     end
     i += 1
