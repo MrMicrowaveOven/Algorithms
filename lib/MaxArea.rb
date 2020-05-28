@@ -4,7 +4,7 @@ def max_area(heights)
 
   sorted_heights.each do |height|
     indices_of_height = heights.indices_of_height_x(height)
-    indices_of_height.each do |index_of_height|
+    indices_of_height.each_with_index do |height, index_of_height|
       left_most = heights.left_most(index_of_height)
       if left_most
         water_amount = heights.how_much_water(left_most, index_of_height)
