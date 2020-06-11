@@ -26,17 +26,34 @@ class GateGroup
   end
 
   def get_solution
+    solution_combs = nil
     @size.times do |i|
       num_switches = i + 1
-      combs = @switches.combination(num_switches)
+      combs = @switches.combination(num_switches).to_a
       combs.each do |comb|
-        sum = comb.sum_by_element
+        sum = comb.sum_by_element.set_to_binary
+        if sum.all? {|el| el == 1}
+          solution_combs = comb
+        end
       end
     end
+    translate_to_switch_indexes(solution_combs)
+  end
+
+  def translate_to_switch_indexes(solution_combs)
+    indices = []
+    solution_combs.each do |solution_comb|
+      indices << switches.index(solution_comb)
+    end
+    indices
   end
 end
 
 class Array
+  def set_to_binary
+    map {|el| el % 2}
+  end
+
   def sum_by_element
     sum = Array.new(self[0].length, 0)
     each do |arr|
