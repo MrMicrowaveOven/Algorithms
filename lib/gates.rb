@@ -1,7 +1,3 @@
-def get_gates()
-
-end
-
 class GateGroup
   attr_reader :size, :switches
   def initialize(size, switches)
