@@ -60,3 +60,18 @@ class Array
     sum
   end
 end
+
+switches = [
+  [1,4],
+  [1,4,6],
+  [1,6],
+  [3],
+  [2,4],
+  [0,2,4],
+  [0,2,4,5,6]
+]
+
+size = 7
+
+gg = GateGroup.new(size, switches)
+p gg.get_solution
